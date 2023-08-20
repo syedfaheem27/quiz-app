@@ -1,8 +1,6 @@
 import React from "react";
-import { useQuiz } from "./context/QuizContext";
 
-const FinishScreen = () => {
-  const { points, totalPoints, highscore, dispatch } = useQuiz();
+const FinishScreen = ({ points, totalPoints, highscore, dispatch }) => {
   const percentScored = (points / totalPoints) * 100;
   let emoji;
   if (percentScored === 100) emoji = "🥇";
